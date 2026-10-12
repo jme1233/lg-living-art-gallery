@@ -1,7 +1,11 @@
 /* ES5 only. No modules, fetch, promises, grid, object-fit or framework. */
 (function () {
   'use strict';
-  var pieces = window.GALLERY_ARTWORK || [];
+  var allPieces = window.GALLERY_ARTWORK || [];
+  var pieces = [];
+  var category = document.getElementById('category');
+  var categoryNames = {'classical': 'Classical paintings', 'nature': 'Nature photography', 'dark': 'Dark gallery', 'abstract': 'Abstract / modern'};
+  var selectedCategory = 'classical';
   var art = document.getElementById('art');
   var controls = document.getElementById('controls');
   var message = document.getElementById('message');
@@ -15,7 +19,7 @@
 
   function clearRotation() { window.clearTimeout(rotationTimer); rotationTimer = null; }
   function renderStatus() {
-    status.textContent = (index < 0 ? 'Opening collection' : 'Artwork ' + (index + 1) + ' of ' + pieces.length) + ' · ' + (paused ? 'Paused' : 'Rotating') + ' · ' + (ms / 1000) + ' seconds' + (loading ? ' · Loading' : '') + (note ? ' · ' + note : '');
+    status.textContent = categoryNames[selectedCategory] + ' · ' + (index < 0 ? 'Opening collection' : 'Artwork ' + (index + 1) + ' of ' + pieces.length) + ' · ' + (paused ? 'Paused' : 'Rotating') + ' · ' + (ms / 1000) + ' seconds' + (loading ? ' · Loading' : '') + (note ? ' · ' + note : '');
   }
   function fit() {
     if (!width || !height) { return; }
@@ -83,6 +87,25 @@
   }
   function step(delta) { show((loading ? target : index < 0 ? 0 : index) + delta); }
   function pause() { paused = !paused; toggle.textContent = paused ? 'Resume' : 'Pause'; schedule(); showControls(); }
+  function selectCategory(value) {
+    selectedCategory = categoryNames[value] ? value : 'classical';
+    pieces = [];
+    var i;
+    for (i = 0; i < allPieces.length; i++) {
+      if ((allPieces[i].category || 'classical') === selectedCategory) { pieces.push(allPieces[i]); }
+    }
+    category.value = selectedCategory;
+    clearRotation(); window.clearTimeout(loadTimer);
+    request++; index = -1; target = 0; loading = false; failed = {}; failureCount = 0;
+    art.style.display = 'none'; width = 0; height = 0;
+    document.getElementById('title').textContent = categoryNames[selectedCategory];
+    document.getElementById('artist').textContent = '';
+    showControls(); show(0);
+  }
+  category.onchange = function () {
+    selectCategory(category.value);
+    try { window.localStorage.setItem('living-art-category', selectedCategory); } catch (ignore) {}
+  };
   function persist() { try { window.localStorage.setItem('living-art-interval', String(ms)); } catch (ignore) {} }
   function fullScreen() {
     var el = document.documentElement;
@@ -133,5 +156,6 @@
       if (saved === interval.options[j].value) { interval.value = saved; ms = parseInt(saved, 10); }
     }
   } catch (ignore) {}
-  showControls(); show(0);
+  try { selectedCategory = window.localStorage.getItem('living-art-category') || 'classical'; } catch (ignore) {}
+  selectCategory(selectedCategory);
 }());

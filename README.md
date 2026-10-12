@@ -2,9 +2,15 @@
 
 **Live gallery:** https://jme1233.github.io/lg-living-art-gallery/
 
-Deployed to GitHub Pages and checked in desktop Chrome on October 11, 2026. Physical LG C9 validation is pending. The desktop browser rejected the page full-screen request; its fallback message passed. Use the TV browser's own full-screen control. See TEST-RESULTS.md for tested behavior and limits.
+The owner confirmed artwork display, full-screen, hidden controls, automatic rotation and Pause/Resume on the physical LG C9. Collection 02 adds museum artwork, nature photography and a category selector; these additions require a new physical TV test. The original desktop checks are in TEST-RESULTS.md.
 
-Static browser gallery for Jaymie's LG OLED65C9PUA (manufactured February 2020; Wi-Fi). The native Gallery app, browser website loading, and browser full-screen were verified by the owner before this milestone. **This prototype has not been validated on the TV.**
+Static browser gallery for LG OLED65C9PUA (manufactured February 2020; Wi-Fi).
+
+## Collections
+
+Use **Collection** to choose Classical paintings, Nature photography, Dark gallery, or Abstract / modern. Automatic rotation and Previous/Next stay within that category. The category is saved when browser storage is available. Changing category starts its first image and preserves paused/running state. There is no mixed-category rotation mode.
+
+Dark gallery is a visual category, not a tested OLED protection feature. Abstract / modern currently contains the three original geometric studies. AI animation remains a future milestone.
 
 ## Start here
 
@@ -58,9 +64,11 @@ Sources: [GitHub: creating a Pages site](https://docs.github.com/en/pages/gettin
 - Artwork starts rotating automatically, initially every 30 seconds. Options: 10 seconds, 30 seconds, 1, 5, 10, or 15 minutes. The interval persists if localStorage is available; unavailable storage does not block the gallery.
 - Previous / Next change art; Pause / Resume stop or restart rotation. Each successfully loaded image receives a full interval.
 - Controls hide after 12 seconds. Clicking the image or pressing Enter / OK reveals them. Left / right change art and Space toggles pause when a form control is not focused. Native select and button keyboard behavior is preserved.
-- Full screen attempts a feature-detected standard or prefixed browser method. If unavailable or rejected, use the TV browser's own full-screen menu. Full-screen availability on this prototype remains untested on the TV.
+- Full screen attempts a feature-detected standard or prefixed browser method. If unavailable or rejected, use the TV browser's own full-screen menu. The owner confirmed full-screen works on the original prototype.
 - TV diagnostics exposes the user-agent, CSS viewport size, and loaded image dimensions. It stays open until toggled off.
 - Images retain their complete aspect ratio with black margins where needed. Layout uses measured pixel sizes rather than `object-fit`. Failed loads skip to another image; all-image failure exposes an error and pauses instead of spinning forever. A 20-second image timeout prevents indefinite loading.
+
+See [ARTWORK-IMPORT-LOG.md](ARTWORK-IMPORT-LOG.md) for unavailable sources and manual download/upload instructions.
 
 ## Update artwork
 
@@ -69,8 +77,8 @@ Sources: [GitHub: creating a Pages site](https://docs.github.com/en/pages/gettin
 
 ```js
 var GALLERY_ARTWORK = [
-  {src: 'artwork/your-image.jpg', title: 'Your title', artist: 'Artist / attribution'},
-  {src: 'artwork/another-image.jpg', title: 'Another title', artist: 'Artist / attribution'}
+  {category: 'classical', src: 'artwork/your-image.jpg', title: 'Your title', artist: 'Artist / attribution'},
+  {category: 'classical', src: 'artwork/another-image.jpg', title: 'Another title', artist: 'Artist / attribution'}
 ];
 ```
 
@@ -84,7 +92,7 @@ git commit -m "Update gallery artwork"
 git push
 ```
 
-The three included samples are original geometric compatibility studies, **not museum paintings or AI-generated artwork**. Each JPEG is 3840 × 2160 pixels. They are local files; the gallery does not call external image hosts. `tools/make_samples.py` can regenerate them using Python, Pillow and numpy; it is not needed to run or deploy the site. See `ARTWORK-LICENSE.md`.
+Each entry must specify `category`: `classical`, `nature`, `dark`, or `abstract`. Add attribution and permission/source details in `artwork-sources.json`. Full artworks are fitted without cropping, with black margins as needed. The museum and nature images are local JPEGs; playback does not depend on museum image servers. Source and delivered pixel dimensions are recorded individually; images are not all 4K.
 
 ## Compatibility strategy and limits
 
@@ -100,7 +108,7 @@ The 4K samples are source image dimensions. Neither a modern desktop test nor us
 
 Desktop browser:
 
-1. Load the deployed URL; check all three samples with Previous / Next.
+1. Load the deployed URL; check every image in each category with Previous / Next.
 2. Select 10 seconds and observe at least three automatic transitions and wrapping to the first image.
 3. Pause for longer than 10 seconds; confirm it stays on the same image. Resume.
 4. Change to 30 seconds; confirm timing changes. Reload and confirm the selected interval persists if storage is allowed.
@@ -120,4 +128,4 @@ Physical LG C9 (owner only):
 
 `node tests/runtime.test.cjs` checks the gallery logic in a small simulated DOM with a deterministic clock. It is not a browser or TV test. See `TEST-RESULTS.md` for observed checks and pending validation.
 
-Next, after the C9 test passes: iPhone companion interface, personal uploads and privacy design, museum curation, scheduling, OLED safeguards, and AI morphing. Add and test one milestone at a time.
+Next, after the new artwork and category selector pass the C9 test: iPhone companion interface, personal uploads and privacy design, scheduling, OLED safeguards, and AI morphing. Add and test one milestone at a time.

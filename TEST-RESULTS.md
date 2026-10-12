@@ -32,8 +32,14 @@ Long selector waits and a continuous observation attempt timed out in the browse
 
 Artwork size inspection: each JPEG is 3840 × 2160. Moonlit Ridge: 195,760 bytes; Tidal Ribbons: 301,270 bytes; Quiet Horizon: 212,420 bytes. Total: 195,760 + 301,270 + 212,420 = 709,450 bytes.
 
-## Pending physical LG C9 test
+## Owner report: original prototype on physical C9
 
-Owner must validate loading over Wi-Fi, automatic rotation, timing, pause/resume, remote operation, full-screen display, sharpness and browser diagnostics. Source image dimensions do not establish TV browser rendering resolution. No OLED safeguard, scheduling, companion interface, personal upload or AI morphing behavior is included or validated.
+The owner confirmed artwork display, full-screen and Hide controls, followed by automatic rotation and Pause/Resume. This is owner-reported testing. Detailed firmware, browser diagnostics and output resolution were not supplied.
 
-See README.md for the physical TV checklist and deployment/artwork-update instructions.
+## Collection 02 — October 12, 2026
+
+13 deterministic logic checks passed, including category isolation for automatic and manual navigation, saved category restoration, stale category fallback, and paused category changes. These use a simulated DOM, not a TV browser. Source image dimensions and hashes are recorded in artwork-sources.json.
+
+Desktop browser validation of the new collection: pending publication.
+Physical LG C9 validation of the new images and category selector: pending owner test.
+

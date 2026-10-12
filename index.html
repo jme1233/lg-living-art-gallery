@@ -13,8 +13,10 @@
     <p id="message" role="status">Loading artwork…</p>
   </main>
   <section id="controls" aria-label="Gallery controls">
-    <div class="heading"><span class="eyebrow">LIVING ART GALLERY / PROTOTYPE 01</span><h1 id="title">Opening the collection</h1><p id="artist"></p></div>
+    <div class="heading"><span class="eyebrow">LIVING ART GALLERY</span><h1 id="title">Opening the collection</h1><p id="artist"></p></div>
     <div class="buttons">
+      <label for="category">Collection</label>
+      <select id="category"><option value="classical">Classical paintings</option><option value="nature">Nature photography</option><option value="dark">Dark gallery</option><option value="abstract">Abstract / modern</option></select>
       <button id="prev" type="button">← Previous</button>
       <button id="toggle" type="button">Pause</button>
       <button id="next" type="button">Next →</button>
@@ -26,10 +28,10 @@
     </div>
     <p id="status" aria-live="polite"></p>
     <p class="hint">Controls hide after 12 seconds. Click the artwork or press OK / Enter to bring them back. Left / right changes art. Space pauses.</p>
-    <div id="diagnostic-panel" style="display:none"><p id="diagnostic-text"></p><p>TV validation: pending your physical C9 test. Page rendering is not proof of OLED protection.</p></div>
+    <div id="diagnostic-panel" style="display:none"><p id="diagnostic-text"></p><p>Original controls: owner tested on C9. New collections and category selector: awaiting your C9 test. Page rendering is not proof of OLED protection.</p></div>
   </section>
   <noscript><p class="no-script">JavaScript is needed to rotate artwork. Enable it in your browser.</p></noscript>
-  <script src="artwork.js"></script>
-  <script src="gallery.js"></script>
+  <script src="artwork.js?v=collections-02"></script>
+  <script src="gallery.js?v=collections-02"></script>
 </body>
 </html>

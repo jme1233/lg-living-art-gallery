@@ -8,17 +8,22 @@ const code = fs.readFileSync(path.join(root, 'gallery.js'), 'utf8');
 function harness(options = {}) {
   let now = 0, id = 0;
   const timers = new Map(), elements = {};
-  const ids = ['art','controls','message','status','interval','toggle','title','artist','prev','next','fullscreen','hide','stage','diagnostics','diagnostic-panel','diagnostic-text'];
-  ids.forEach(name => elements[name] = {style: {},textContent:'',tagName: name === 'interval' ? 'SELECT' : 'DIV',setAttribute(k,v){this[k]=v;},contains(el){return el === elements.hide;}});
+  const ids = ['category','art','controls','message','status','interval','toggle','title','artist','prev','next','fullscreen','hide','stage','diagnostics','diagnostic-panel','diagnostic-text'];
+  ids.forEach(name => elements[name] = {style: {},textContent:'',tagName: (name === 'interval' || name === 'category') ? 'SELECT' : 'DIV',setAttribute(k,v){this[k]=v;},contains(el){return el === elements.hide;}});
   elements.interval.value = '30000';
   elements.interval.options = ['10000','30000','60000','300000','600000','900000'].map(value=>({value}));
   const document = {getElementById: name=>elements[name],documentElement:{clientWidth:1920,clientHeight:1080},activeElement:null};
-  const storage = {value: options.saved || null,getItem(){if(options.storageThrows)throw Error('denied'); return this.value;},setItem(k,v){if(options.storageThrows)throw Error('denied');this.value=v;}};
+  const storage = {value: options.saved || null,getItem(k){if(options.storageThrows)throw Error('denied'); return k === 'living-art-category' ? (options.savedCategory || null) : this.value;},setItem(k,v){if(options.storageThrows)throw Error('denied');if(k === 'living-art-category')this.category=v;else this.value=v;}};
   const window = {localStorage:storage,setTimeout(fn,ms){timers.set(++id,{time:now+ms,fn});return id;},clearTimeout(id){timers.delete(id);}};
   const context = {window,document,navigator:{userAgent:'SIMULATED DOM; not a browser'},Image:function(){Object.defineProperty(this,'src',{get(){return this.url;},set(url){this.url=url;if(options.neverLoads)return;if(options.fail && options.fail(url)){if(this.onerror)this.onerror();}else{this.naturalWidth=3840;this.naturalHeight=2160;this.onload();}}});}};
   vm.createContext(context);
   vm.runInContext(fs.readFileSync(path.join(root,'artwork.js'),'utf8'),context);
-  window.GALLERY_ARTWORK=context.GALLERY_ARTWORK;
+  // Stable synthetic fixture isolates playback checks from curatorial changes.
+  window.GALLERY_ARTWORK=options.pieces || [
+    {src:'artwork/moonlit-ridge.jpg',title:'Moonlit Ridge'},
+    {src:'artwork/tidal-ribbons.jpg',title:'Tidal Ribbons'},
+    {src:'artwork/quiet-horizon.jpg',title:'Quiet Horizon'}
+  ];
   vm.runInContext(code,context);
   function tick(ms){const end=now+ms;let guard=0;while(true){const next=[...timers].filter(([,t])=>t.time<=end).sort((a,b)=>a[1].time-b[1].time)[0];if(!next)break;if(++guard>1000)throw Error('timer loop');now=next[1].time;timers.delete(next[0]);next[1].fn();}now=end;}
   return {elements,window,document,storage,tick};
@@ -36,4 +41,6 @@ test('failed first JPEG skips and all failures stop with visible error',()=>{con
 test('stalled image loading times out rather than waiting forever',()=>{const h=harness({neverLoads:true});h.tick(63000);assert.match(h.elements.message.textContent,/could not load/);assert.equal(h.elements.toggle.textContent,'Resume');});
 test('diagnostics stays open and reports source dimensions',()=>{const h=harness();h.elements.diagnostics.onclick();h.tick(20000);assert.equal(h.elements.controls.style.display,'block');assert.match(h.elements['diagnostic-text'].textContent,/3840 × 2160/);});
 test('all local runtime assets referenced by the manifest exist',()=>{const context={};vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(root,'artwork.js'),'utf8'),context);for(const piece of context.GALLERY_ARTWORK)assert.ok(fs.existsSync(path.join(root,piece.src)));for(const name of ['index.html','gallery.css','gallery.js','artwork.js','.nojekyll'])assert.ok(fs.existsSync(path.join(root,name)));});
+test('category selection restricts automatic and manual navigation and persists',()=>{const h=harness({pieces:[{src:'c1',title:'C1',category:'classical'},{src:'n1',title:'N1',category:'nature'},{src:'c2',title:'C2',category:'classical'},{src:'n2',title:'N2',category:'nature'}]});const e=h.elements;e.category.value='nature';e.category.onchange();assert.equal(e.title.textContent,'N1');h.tick(30000);assert.equal(e.title.textContent,'N2');h.tick(30000);assert.equal(e.title.textContent,'N1');e.prev.onclick();assert.equal(e.title.textContent,'N2');assert.equal(h.storage.category,'nature');e.toggle.onclick();e.category.value='classical';e.category.onchange();h.tick(60000);assert.equal(e.title.textContent,'C1');assert.equal(e.toggle.textContent,'Resume');});
+test('saved category restores and stale category falls back',()=>{const pieces=[{src:'c',title:'Classical',category:'classical'},{src:'n',title:'Nature',category:'nature'}];assert.equal(harness({pieces,savedCategory:'nature'}).elements.title.textContent,'Nature');assert.equal(harness({pieces,savedCategory:'removed'}).elements.title.textContent,'Classical');});
 console.log(`${count} logic checks passed. Browser and TV validation are separate.`);

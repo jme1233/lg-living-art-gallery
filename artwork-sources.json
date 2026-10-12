@@ -1,0 +1,344 @@
+[
+  {
+    "src": "artwork/van-gogh-wheat-field-cypresses.jpg",
+    "title": "Wheat Field with Cypresses",
+    "full_title": "Wheat Field with Cypresses",
+    "artist": "Vincent van Gogh",
+    "date": "1889",
+    "museum": "The Metropolitan Museum of Art",
+    "museum_object_id": 436535,
+    "source_page": "https://www.metmuseum.org/art/collection/search/436535",
+    "metadata_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436535",
+    "original_image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP-42549-001.jpg",
+    "is_public_domain": true,
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "museum_policy_url": "https://www.metmuseum.org/hubs/open-access",
+    "credit_line": "Purchase, The Annenberg Foundation Gift, 1993",
+    "retrieved_utc": "2026-10-12T03:46:46.890210+00:00",
+    "source_dimensions": [
+      4000,
+      3184
+    ],
+    "delivered_dimensions": [
+      2714,
+      2160
+    ],
+    "delivered_bytes": 2439901,
+    "delivered_sha256": "df9b0bd3da55450f82368d92b80a4ba9c9934f7ff24eca4732607133ef5fc4b1",
+    "processing": "ICC profile converted to sRGB when present; EXIF orientation applied; downsampled within 3840 x 2160, no upscaling, no cropping; baseline JPEG quality 88.",
+    "category": "classical"
+  },
+  {
+    "src": "artwork/turner-venice.jpg",
+    "title": "Venice, from the Porch of Madonna della Salute",
+    "full_title": "Venice, from the Porch of Madonna della Salute",
+    "artist": "Joseph Mallord William Turner",
+    "date": "ca. 1835",
+    "museum": "The Metropolitan Museum of Art",
+    "museum_object_id": 437853,
+    "source_page": "https://www.metmuseum.org/art/collection/search/437853",
+    "metadata_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/437853",
+    "original_image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP169568.jpg",
+    "is_public_domain": true,
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "museum_policy_url": "https://www.metmuseum.org/hubs/open-access",
+    "credit_line": "Bequest of Cornelius Vanderbilt, 1899",
+    "retrieved_utc": "2026-10-12T03:46:55.275116+00:00",
+    "source_dimensions": [
+      1959,
+      1461
+    ],
+    "delivered_dimensions": [
+      1959,
+      1461
+    ],
+    "delivered_bytes": 698874,
+    "delivered_sha256": "0712c15fa5dbe4a74c4c00e9c6eafc18e82afa73be9d706a7094bcf1e74b214d",
+    "processing": "ICC profile converted to sRGB when present; EXIF orientation applied; downsampled within 3840 x 2160, no upscaling, no cropping; baseline JPEG quality 88.",
+    "category": "classical"
+  },
+  {
+    "src": "artwork/cole-the-oxbow.jpg",
+    "title": "The Oxbow",
+    "full_title": "View from Mount Holyoke, Northampton, Massachusetts, after a Thunderstorm—The Oxbow",
+    "artist": "Thomas Cole",
+    "date": "1836",
+    "museum": "The Metropolitan Museum of Art",
+    "museum_object_id": 10497,
+    "source_page": "https://www.metmuseum.org/art/collection/search/10497",
+    "metadata_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/10497",
+    "original_image_url": "https://images.metmuseum.org/CRDImages/ad/original/DP-12550-001.jpg",
+    "is_public_domain": true,
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "museum_policy_url": "https://www.metmuseum.org/hubs/open-access",
+    "credit_line": "Gift of Mrs. Russell Sage, 1908",
+    "retrieved_utc": "2026-10-12T03:47:04.410651+00:00",
+    "source_dimensions": [
+      4000,
+      2733
+    ],
+    "delivered_dimensions": [
+      3161,
+      2160
+    ],
+    "delivered_bytes": 1217287,
+    "delivered_sha256": "106ef6dc46c4fd8893b66c3c5804ac33a94c303edb388dc9425c650722c85ed3",
+    "processing": "ICC profile converted to sRGB when present; EXIF orientation applied; downsampled within 3840 x 2160, no upscaling, no cropping; baseline JPEG quality 88.",
+    "category": "classical"
+  },
+  {
+    "src": "artwork/church-heart-of-the-andes.jpg",
+    "title": "Heart of the Andes",
+    "full_title": "Heart of the Andes",
+    "artist": "Frederic Edwin Church",
+    "date": "1859",
+    "museum": "The Metropolitan Museum of Art",
+    "museum_object_id": 10481,
+    "source_page": "https://www.metmuseum.org/art/collection/search/10481",
+    "metadata_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/10481",
+    "original_image_url": "https://images.metmuseum.org/CRDImages/ad/original/DT78.jpg",
+    "is_public_domain": true,
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "museum_policy_url": "https://www.metmuseum.org/hubs/open-access",
+    "credit_line": "Bequest of Margaret E. Dows, 1909",
+    "retrieved_utc": "2026-10-12T03:47:13.138098+00:00",
+    "source_dimensions": [
+      3811,
+      2099
+    ],
+    "delivered_dimensions": [
+      3811,
+      2099
+    ],
+    "delivered_bytes": 2584664,
+    "delivered_sha256": "106abf179b65587e44935aa58c48dcc2758e289c0a823927f8922f361d2b9442",
+    "processing": "ICC profile converted to sRGB when present; EXIF orientation applied; downsampled within 3840 x 2160, no upscaling, no cropping; baseline JPEG quality 88.",
+    "category": "classical"
+  },
+  {
+    "src": "artwork/hokusai-great-wave.jpg",
+    "title": "The Great Wave",
+    "full_title": "Under the Wave off Kanagawa (Kanagawa oki nami ura), also known as The Great Wave, from the series Thirty-six Views of Mount Fuji (Fugaku sanjūrokkei)",
+    "artist": "Katsushika Hokusai",
+    "date": "ca. 1830–32",
+    "museum": "The Metropolitan Museum of Art",
+    "museum_object_id": 45434,
+    "source_page": "https://www.metmuseum.org/art/collection/search/45434",
+    "metadata_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/45434",
+    "original_image_url": "https://images.metmuseum.org/CRDImages/as/original/DP130155.jpg",
+    "is_public_domain": true,
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "museum_policy_url": "https://www.metmuseum.org/hubs/open-access",
+    "credit_line": "H. O. Havemeyer Collection, Bequest of Mrs. H. O. Havemeyer, 1929",
+    "retrieved_utc": "2026-10-12T03:47:22.133546+00:00",
+    "source_dimensions": [
+      3859,
+      2594
+    ],
+    "delivered_dimensions": [
+      3213,
+      2160
+    ],
+    "delivered_bytes": 2093247,
+    "delivered_sha256": "d4897817c0a990307dd12b4d7b77d706ab58540674106108cce015d84b15c38c",
+    "processing": "ICC profile converted to sRGB when present; EXIF orientation applied; downsampled within 3840 x 2160, no upscaling, no cropping; baseline JPEG quality 88.",
+    "category": "classical"
+  },
+  {
+    "src": "artwork/bierstadt-sierra-nevada.jpg",
+    "title": "Among the Sierra Nevada, California",
+    "artist": "Albert Bierstadt · 1868 · Smithsonian American Art Museum",
+    "category": "classical",
+    "source_page": "https://americanart.si.edu/artwork/among-sierra-nevada-california-2059",
+    "original_image_url": "https://ids.si.edu/ids/deliveryService?id=SAAM-1977.107.1_2&max=4000",
+    "license": "CC0 1.0",
+    "is_public_domain": true,
+    "source_dimensions": [
+      2999,
+      1799
+    ],
+    "delivered_dimensions": [
+      2999,
+      1799
+    ],
+    "delivered_bytes": 871431,
+    "delivered_sha256": "0a713c37bbfaf7452c918bad9a19e7a29a6352fad4ab8385427d7fe03f22faf0",
+    "retrieved_utc": "2026-10-12T13:47:01.926386+00:00",
+    "processing": "sRGB baseline JPEG; downsampled within 3840 x 2160; no cropping or upscaling"
+  },
+  {
+    "src": "artwork/monet-japanese-footbridge.jpg",
+    "title": "The Japanese Footbridge",
+    "artist": "Claude Monet",
+    "date": "1899",
+    "museum": "National Gallery of Art",
+    "category": "classical",
+    "source_page": "https://www.nga.gov/artworks/74796-japanese-footbridge",
+    "original_image_url": "https://api.nga.gov/iiif/0b9cefb5-1ee4-401a-8154-8d4039191a28/full/full/0/default.jpg?attachment_filename=the_japanese_footbridge_1992.9.1.jpg",
+    "download_image_url": "https://api.nga.gov/iiif/0b9cefb5-1ee4-401a-8154-8d4039191a28/full/!3840,2160/0/default.jpg",
+    "license": "Public domain / NGA Open Access",
+    "is_public_domain": true,
+    "source_dimensions": [
+      4096,
+      3302
+    ],
+    "delivered_dimensions": [
+      2679,
+      2160
+    ],
+    "delivered_bytes": 2545044,
+    "delivered_sha256": "78483650788720e12877859c9c16a58ca7d488a0016c2cba4f5ec31c50c8cd2b",
+    "processing": "NGA IIIF fit-size image, converted to sRGB baseline JPEG; no cropping or upscaling"
+  },
+  {
+    "src": "artwork/hoh-mist-forest.jpg",
+    "title": "Hoh Rain Forest in Mist",
+    "artist": "NPS / J. Preston · Olympic National Park",
+    "category": "nature",
+    "source_page": "https://www.flickr.com/photos/olympicnps/17115216790/",
+    "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Hoh_mist_forest_trees_Hoh_NPS_Photo_j_preston_%2817115216790%29.jpg",
+    "license": "Public domain (U.S. federal government work)",
+    "is_public_domain": true,
+    "source_dimensions": [
+      3872,
+      2592
+    ],
+    "delivered_dimensions": [
+      3227,
+      2160
+    ],
+    "delivered_bytes": 975933,
+    "delivered_sha256": "006d3b5fa4efe9458fdab4c4f34481288b66eeb2ab8111a65c61bfd3f651f57f",
+    "retrieved_utc": "2026-10-12T13:47:02.265244+00:00",
+    "processing": "sRGB baseline JPEG; downsampled within 3840 x 2160; no cropping or upscaling"
+  },
+  {
+    "src": "artwork/enchanted-valley-forest.jpg",
+    "title": "Enchanted Valley Forest",
+    "artist": "NPS / R. Cahill · Olympic National Park",
+    "category": "nature",
+    "source_page": "https://www.flickr.com/photos/olympicnps/23074095375/",
+    "original_image_url": "https://upload.wikimedia.org/wikipedia/commons/c/cd/Montane_mist_forest_Enchanted_Valley_trail_Quinault_NPS_Photo_%2823074095375%29.jpg",
+    "license": "Public domain (U.S. federal government work)",
+    "is_public_domain": true,
+    "source_dimensions": [
+      3564,
+      5419
+    ],
+    "delivered_dimensions": [
+      1421,
+      2160
+    ],
+    "delivered_bytes": 664177,
+    "delivered_sha256": "80d755c44a1f373d51270cf73d67149995d7b102d131155ea625a9c3a7d684fd",
+    "retrieved_utc": "2026-10-12T13:47:02.662240+00:00",
+    "processing": "sRGB baseline JPEG; downsampled within 3840 x 2160; no cropping or upscaling"
+  },
+  {
+    "src": "artwork/kalf-still-life.jpg",
+    "title": "Still Life with Fruit, Glassware, and a Wanli Bowl",
+    "full_title": "Still Life with Fruit, Glassware, and a Wanli Bowl",
+    "artist": "Willem Kalf",
+    "date": "1659",
+    "museum": "The Metropolitan Museum of Art",
+    "museum_object_id": 436805,
+    "source_page": "https://www.metmuseum.org/art/collection/search/436805",
+    "metadata_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/436805",
+    "original_image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP145932.jpg",
+    "is_public_domain": true,
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "museum_policy_url": "https://www.metmuseum.org/hubs/open-access",
+    "credit_line": "Maria DeWitt Jesup Fund, 1953",
+    "retrieved_utc": "2026-10-12T13:48:18.191780+00:00",
+    "source_dimensions": [
+      3251,
+      3697
+    ],
+    "delivered_dimensions": [
+      1899,
+      2160
+    ],
+    "delivered_bytes": 630168,
+    "delivered_sha256": "d31e34c9c5b17211c8a8b2bc46945ed77550aaa5819da84f97155053e76ac012",
+    "processing": "ICC profile converted to sRGB when present; EXIF orientation applied; downsampled within 3840 x 2160, no upscaling, no cropping; baseline JPEG quality 88.",
+    "category": "dark"
+  },
+  {
+    "src": "artwork/heda-still-life.jpg",
+    "title": "Still Life with Oysters, a Silver Tazza, and Glassware",
+    "full_title": "Still Life with Oysters, a Silver Tazza, and Glassware",
+    "artist": "Willem Claesz Heda",
+    "date": "1635",
+    "museum": "The Metropolitan Museum of Art",
+    "museum_object_id": 438376,
+    "source_page": "https://www.metmuseum.org/art/collection/search/438376",
+    "metadata_url": "https://collectionapi.metmuseum.org/public/collection/v1/objects/438376",
+    "original_image_url": "https://images.metmuseum.org/CRDImages/ep/original/DP120415.jpg",
+    "is_public_domain": true,
+    "license": "CC0 1.0",
+    "license_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "museum_policy_url": "https://www.metmuseum.org/hubs/open-access",
+    "credit_line": "From the Collection of Rita and Frits Markus, Bequest of Rita Markus, 2005",
+    "retrieved_utc": "2026-10-12T13:48:25.919565+00:00",
+    "source_dimensions": [
+      3871,
+      2394
+    ],
+    "delivered_dimensions": [
+      3493,
+      2160
+    ],
+    "delivered_bytes": 1090838,
+    "delivered_sha256": "6542e7477942f3f73b0c79dbc9e02f124c60d55ac4aa9c9ffaa80fec00ae190a",
+    "processing": "ICC profile converted to sRGB when present; EXIF orientation applied; downsampled within 3840 x 2160, no upscaling, no cropping; baseline JPEG quality 88.",
+    "category": "dark"
+  },
+  {
+    "src": "artwork/moonlit-ridge.jpg",
+    "title": "Moonlit Ridge",
+    "artist": "Living Art Gallery · original geometric study",
+    "category": "abstract",
+    "license": "Original project sample: use, modification and redistribution permitted for this project and public prototype",
+    "source_page": "tools/make_samples.py",
+    "delivered_dimensions": [
+      3840,
+      2160
+    ],
+    "delivered_bytes": 195760,
+    "delivered_sha256": "6aad310816af47f159adcf482c843439b0ce72eed3fba6606accaa2a4d7b661a"
+  },
+  {
+    "src": "artwork/tidal-ribbons.jpg",
+    "title": "Tidal Ribbons",
+    "artist": "Living Art Gallery · original geometric study",
+    "category": "abstract",
+    "license": "Original project sample: use, modification and redistribution permitted for this project and public prototype",
+    "source_page": "tools/make_samples.py",
+    "delivered_dimensions": [
+      3840,
+      2160
+    ],
+    "delivered_bytes": 301270,
+    "delivered_sha256": "f922c57758c839a9a479f06a34150e34ba4a215412f945f9b3a64cf3aa9b76f9"
+  },
+  {
+    "src": "artwork/quiet-horizon.jpg",
+    "title": "Quiet Horizon",
+    "artist": "Living Art Gallery · original geometric study",
+    "category": "abstract",
+    "license": "Original project sample: use, modification and redistribution permitted for this project and public prototype",
+    "source_page": "tools/make_samples.py",
+    "delivered_dimensions": [
+      3840,
+      2160
+    ],
+    "delivered_bytes": 212420,
+    "delivered_sha256": "9bbab161ffd0ce6524320ef8daae0238358b62fbb7618cee813a230cf8a14283"
+  }
+]
