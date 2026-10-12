@@ -1,5 +1,9 @@
 # LG OLED Living Art Gallery — prototype 01
 
+**Live gallery:** https://jme1233.github.io/lg-living-art-gallery/
+
+Deployed to GitHub Pages and checked in desktop Chrome on October 11, 2026. Physical LG C9 validation is pending. The desktop browser rejected the page full-screen request; its fallback message passed. Use the TV browser's own full-screen control. See TEST-RESULTS.md for tested behavior and limits.
+
 Static browser gallery for Jaymie's LG OLED65C9PUA (manufactured February 2020; Wi-Fi). The native Gallery app, browser website loading, and browser full-screen were verified by the owner before this milestone. **This prototype has not been validated on the TV.**
 
 ## Start here
