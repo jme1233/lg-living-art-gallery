@@ -40,6 +40,14 @@ The owner confirmed artwork display, full-screen and Hide controls, followed by 
 
 13 deterministic logic checks passed, including category isolation for automatic and manual navigation, saved category restoration, stale category fallback, and paused category changes. These use a simulated DOM, not a TV browser. Source image dimensions and hashes are recorded in artwork-sources.json.
 
-Desktop browser validation of the new collection: pending publication.
+Desktop Chrome on Linux, 1363 × 936 CSS pixels:
+
+- All 14 images loaded with the repaired `collections-02b` URLs and decoded at the documented dimensions.
+- Manual Previous/Next and category-specific wraparound passed for all four categories. Changing categories while paused preserved the paused state.
+- Dark gallery selection survived reload. At the 10-second setting, the dark collection automatically changed from Kalf to Heda and back to Kalf. Exact dwell times were not measured; one long selector wait timed out in browser automation, with the resulting transition confirmed in a later DOM observation.
+- Hidden controls recovered by clicking the stage. The final Monet screenshot was visually inspected after repair and showed the complete decoded painting with its original proportions and black margins.
+- GitHub blob hashes were checked against the full local JPEG bytes. Separate live HTTP downloads of all 14 versioned JPEGs matched the recorded SHA-256 hashes and fully decoded in Pillow. Header dimensions alone are insufficient validation; incomplete transfers detected during visual QA were replaced before acceptance.
+
+The runtime does not change OLED brightness, control TV power or implement burn-in safeguards. Full-screen was already owner-confirmed on the original build; it was not re-tested in this desktop update.
 Physical LG C9 validation of the new images and category selector: pending owner test.
 
