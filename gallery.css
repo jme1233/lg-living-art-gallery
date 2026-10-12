@@ -1,0 +1,11 @@
+html,body{margin:0;padding:0;width:100%;height:100%;overflow:hidden;background:#000;color:#eee;font-family:Arial,Helvetica,sans-serif}
+#stage{position:absolute;top:0;right:0;bottom:0;left:0;overflow:hidden;text-align:center}
+#art{position:absolute;display:none;border:0}
+#message{position:absolute;top:45%;left:10%;right:10%;font-size:22px;line-height:1.5}
+#controls{position:absolute;left:0;right:0;bottom:0;padding:24px 32px 20px;background:#101518;background:rgba(12,17,19,.94);border-top:1px solid #39413d}
+.eyebrow{font-size:11px;letter-spacing:2px;color:#b7c8bd}h1{font-size:26px;font-weight:normal;margin:8px 0 4px}#artist{font-size:13px;color:#aab7b1;margin:0 0 18px}
+.buttons button,.buttons select{font:16px Arial,Helvetica,sans-serif;color:#eee;background:#202a28;border:1px solid #65776d;border-radius:4px;padding:11px 14px;margin:0 8px 10px 0;cursor:pointer}
+.buttons label{font-size:13px;margin-right:8px}.buttons button:focus,.buttons select:focus{outline:3px solid #d8b888;outline-offset:2px}.buttons button:hover{background:#34453c}
+#status{font-size:14px;margin:0 0 8px;color:#d6c49c}.hint{font-size:12px;line-height:1.5;color:#b2bab6;margin:0}#diagnostic-panel{font-size:12px;line-height:1.5;word-wrap:break-word;margin-top:12px;color:#cbd6cf}
+.no-script{position:absolute;top:15%;left:10%;right:10%;background:#222;padding:20px}
+@media(max-width:700px){#controls{padding:16px}.buttons button,.buttons select{font-size:14px;padding:9px 10px}h1{font-size:21px}.hint{font-size:11px}}

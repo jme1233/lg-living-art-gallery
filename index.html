@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A small, quiet art gallery for the LG C9 browser.">
+  <title>Living Art Gallery</title>
+  <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+  <main id="stage" aria-label="Artwork display">
+    <img id="art" alt="">
+    <p id="message" role="status">Loading artwork…</p>
+  </main>
+  <section id="controls" aria-label="Gallery controls">
+    <div class="heading"><span class="eyebrow">LIVING ART GALLERY / PROTOTYPE 01</span><h1 id="title">Opening the collection</h1><p id="artist"></p></div>
+    <div class="buttons">
+      <button id="prev" type="button">← Previous</button>
+      <button id="toggle" type="button">Pause</button>
+      <button id="next" type="button">Next →</button>
+      <label for="interval">Rotate every</label>
+      <select id="interval"><option value="10000">10 sec · test</option><option value="30000" selected>30 sec · test</option><option value="60000">1 minute</option><option value="300000">5 minutes</option><option value="600000">10 minutes</option><option value="900000">15 minutes</option></select>
+      <button id="fullscreen" type="button">Full screen</button>
+      <button id="hide" type="button">Hide controls</button>
+      <button id="diagnostics" type="button" aria-expanded="false">TV diagnostics</button>
+    </div>
+    <p id="status" aria-live="polite"></p>
+    <p class="hint">Controls hide after 12 seconds. Click the artwork or press OK / Enter to bring them back. Left / right changes art. Space pauses.</p>
+    <div id="diagnostic-panel" style="display:none"><p id="diagnostic-text"></p><p>TV validation: pending your physical C9 test. Page rendering is not proof of OLED protection.</p></div>
+  </section>
+  <noscript><p class="no-script">JavaScript is needed to rotate artwork. Enable it in your browser.</p></noscript>
+  <script src="artwork.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>
